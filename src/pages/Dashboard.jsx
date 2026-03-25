@@ -171,13 +171,13 @@ export default function Dashboard() {
 function ListItem({ product, onEdit }) {
   return (
     <div className="glass-card flex items-center gap-5 p-4 hover:border-white/20 transition-all hover:shadow-xl hover:shadow-brand-900/10">
-      <a href={`/product/${product.id}`} className="w-16 h-16 flex items-center justify-center bg-white/5 rounded-xl shrink-0 p-2">
+      <Link to={`/product/${product.id}`} className="w-16 h-16 flex items-center justify-center bg-white/5 rounded-xl shrink-0 p-2">
         <img src={product.image} alt={product.title} className="max-w-full max-h-full object-contain mix-blend-lighten" />
-      </a>
+      </Link>
       <div className="flex-1 min-w-0">
-        <a href={`/product/${product.id}`} className="text-sm font-semibold text-gray-100 hover:text-brand-300 line-clamp-1 transition-colors">
+        <Link to={`/product/${product.id}`} className="text-sm font-semibold text-gray-100 hover:text-brand-300 line-clamp-1 transition-colors">
           {product.title}
-        </a>
+        </Link>
         <p className="text-xs text-gray-500 capitalize mt-0.5">{product.category}</p>
       </div>
       <div className="flex items-center gap-1 text-xs text-gray-400 shrink-0">
